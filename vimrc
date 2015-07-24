@@ -50,6 +50,9 @@ nmap <silent> <Up> gk
 " do `brew install ag`
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
+" https://github.com/vim-scripts/perl-support.vim
+let g:Perl_InsertFileHeader = 'no'
+
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
 execute pathogen#infect()
