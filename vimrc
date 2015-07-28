@@ -54,7 +54,9 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:Perl_InsertFileHeader = 'no'
 
 " https://github.com/plasticboy/vim-markdown
-let g:vim_markdown_frontmatter=1
+let g:vim_markdown_frontmatter  = 1
+let g:vim_markdown_folding_disabled = 1
+
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
 execute pathogen#infect()
