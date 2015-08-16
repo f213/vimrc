@@ -46,6 +46,13 @@ imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
+imap <silent> j <C-o>gj
+imap <silent> k <C-o>gk
+nmap <silent> j gj
+nmap <silent> k gk
+
+
+
 " https://github.com/kien/ctrlp.vim
 " do `brew install ag`
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
