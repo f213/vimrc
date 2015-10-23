@@ -22,3 +22,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/cosco.vim"]
+	path = bundle/cosco.vim
+	url = https://github.com/lfilho/cosco.vim

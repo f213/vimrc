@@ -46,10 +46,6 @@ imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
-imap <silent> j <C-o>gj
-imap <silent> k <C-o>gk
-nmap <silent> j gj
-nmap <silent> k gk
 
 
 
@@ -63,6 +59,11 @@ let g:Perl_InsertFileHeader = 'no'
 " https://github.com/plasticboy/vim-markdown
 let g:vim_markdown_frontmatter  = 1
 let g:vim_markdown_folding_disabled = 1
+autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
+
+" https://github.com/lfilho/cosco.vim
+autocmd FileType javascript,css nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
