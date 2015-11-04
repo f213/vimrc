@@ -28,3 +28,6 @@
 [submodule "bundle/IndexedSearch"]
 	path = bundle/IndexedSearch
 	url = https://github.com/vim-scripts/IndexedSearch
+[submodule "bundle/editorconfig-vim"]
+	path = bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
