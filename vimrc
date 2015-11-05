@@ -1,5 +1,7 @@
 let macvim_skip_colorscheme = 1
 
+execute pathogen#infect()
+
 highlight Normal guibg=lightyellow
 
 set gfn=Terminus\ (TTF):h18
@@ -29,8 +31,6 @@ set iminsert=0
 set imsearch=0
 
 filetype plugin indent on
-set shiftwidth=4 
-set tabstop=4 
 set expandtab
 set smarttab
 set smartindent
@@ -67,4 +67,3 @@ autocmd FileType javascript,css,perl inoremap <silent> <Leader>; <c-o>:call cosc
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
-execute pathogen#infect()
