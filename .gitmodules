@@ -31,3 +31,6 @@
 [submodule "bundle/editorconfig-vim"]
 	path = bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "bundle/KeyboardLayoutSwitcher"]
+	path = bundle/KeyboardLayoutSwitcher
+	url = https://github.com/porqz/KeyboardLayoutSwitcher
