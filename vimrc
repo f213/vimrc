@@ -1,24 +1,46 @@
 let macvim_skip_colorscheme = 1
 
-execute pathogen#infect()
+"execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
 
-highlight Normal guibg=lightyellow
+Plug 'tpope/vim-sensible'
 
-set gfn=Terminus\ (TTF):h18
-set backspace=indent,start,eol
-set nocompatible
-set nostartofline
-set ignorecase
-set whichwrap+=>
-set whichwrap+=<
-set ch=2
-set ruler
-let c_comment_strings=1
-syntax on
-set hlsearch
+Plug 'altercation/vim-colors-solarized'
+
+" Stuff
+Plug 'editorconfig/editorconfig-vim'
+Plug 'porqz/KeyboardLayoutSwitcher'
+
+" Operation
+Plug 'lfilho/cosco.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'kien/ctrlp.vim'
+
+
+" Modes
+Plug 'digitaltoad/vim-jade'
+Plug 'plasticboy/vim-markdown'
+Plug 'wavded/vim-stylus'
+
+call plug#end()
+
+
+syntax enable
+filetype plugin indent on
+if has('gui_running')
+        set background=light
+        set gfn=Terminus\ (TTF):h18
+else
+        set background=dark
+endif
+colorscheme solarized
+
+set ch          =2
+
+set noincsearch
 set mousehide
 
-set showmode
 set noerrorbells
 set visualbell t_vb=
 
@@ -26,14 +48,16 @@ set noeol
 set binary
 
 " russian hotkeys
-set keymap=russian-jcukenwin
-set iminsert=0
-set imsearch=0
+set keymap      =russian-jcukenwin
+set iminsert    =0
+set imsearch    =0
 
-filetype plugin indent on
 set expandtab
 set smarttab
+set tabstop     =4
+set shiftwidth  =4
 set smartindent
+set autoindent
 
 set dir=/tmp
 
@@ -49,21 +73,13 @@ nmap <silent> <Up> gk
 
 
 
-" https://github.com/kien/ctrlp.vim
-" do `brew install ag`
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
 
-" https://github.com/vim-scripts/perl-support.vim
-let g:Perl_InsertFileHeader = 'no'
-
-" https://github.com/plasticboy/vim-markdown
-let g:vim_markdown_frontmatter  = 1
+let g:vim_markdown_frontmatter      = 1
 let g:vim_markdown_folding_disabled = 1
 autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
 
-" https://github.com/lfilho/cosco.vim
 autocmd FileType javascript,css,perl nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,css,perl inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
-
