@@ -10,7 +10,7 @@ Plug 'porqz/KeyboardLayoutSwitcher'
 Plug 'lfilho/cosco.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Modes
 Plug 'digitaltoad/vim-jade'
