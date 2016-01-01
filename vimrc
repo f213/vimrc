@@ -1,9 +1,4 @@
-let macvim_skip_colorscheme = 1
-
-"execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
-
-Plug 'tpope/vim-sensible'
 
 Plug 'altercation/vim-colors-solarized'
 
@@ -17,7 +12,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'kien/ctrlp.vim'
 
-
 " Modes
 Plug 'digitaltoad/vim-jade'
 Plug 'plasticboy/vim-markdown'
@@ -25,9 +19,8 @@ Plug 'wavded/vim-stylus'
 
 call plug#end()
 
+source ~/.vim/boilerplate.vim
 
-syntax enable
-filetype plugin indent on
 if has('gui_running')
         set background=light
         set gfn=Terminus\ (TTF):h18
@@ -36,30 +29,18 @@ else
 endif
 colorscheme solarized
 
-set ch          =2
-
-set noincsearch
-set mousehide
-
-set noerrorbells
-set visualbell t_vb=
-
-set noeol
-set binary
-
 " russian hotkeys
 set keymap      =russian-jcukenwin
 set iminsert    =0
 set imsearch    =0
 
+" spaces instead of tabs
 set expandtab
 set smarttab
 set tabstop     =4
 set shiftwidth  =4
 set smartindent
 set autoindent
-
-set dir=/tmp
 
 " i love wrapping
 set wrap
@@ -71,8 +52,16 @@ nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
 
+" ui options (i dont love distraction)
+set noruler
+set noshowmode
+
+" search options
+set noincsearch
+set ignorecase
 
 
+" plugin configuration
 let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
 
 let g:vim_markdown_frontmatter      = 1
