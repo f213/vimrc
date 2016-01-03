@@ -16,6 +16,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-jade'
 Plug 'plasticboy/vim-markdown'
 Plug 'wavded/vim-stylus'
+Plug 'stephpy/vim-yaml' " Faster and more robust yaml highlighter
 
 call plug#end()
 
