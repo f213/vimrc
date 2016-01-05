@@ -24,7 +24,7 @@ source ~/.vim/boilerplate.vim
 
 if has('gui_running')
         set background=light
-        set gfn=Terminus\ (TTF):h18
+        set gfn=Consolas:h16
 else
         set background=dark
 endif
