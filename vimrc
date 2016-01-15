@@ -20,11 +20,12 @@ Plug 'stephpy/vim-yaml' " Faster and more robust yaml highlighter
 
 call plug#end()
 
-source ~/.vim/boilerplate.vim
+source ~/.vim/_includes/boilerplate.vim
 
 if has('gui_running')
         set background=light
         set gfn=Consolas:h16
+        source ~/.vim/_includes/wrapping.vim
 else
         set background=dark
 endif
@@ -43,16 +44,6 @@ set shiftwidth  =4
 set smartindent
 set autoindent
 
-" i love wrapping
-set wrap
-set linebreak
-set nolist
-imap <silent> <Down> <C-o>gj
-imap <silent> <Up> <C-o>gk
-nmap <silent> <Down> gj
-nmap <silent> <Up> gk
-
-
 " ui options (i dont love distraction)
 set noruler
 set noshowmode
@@ -61,6 +52,12 @@ set noshowmode
 set noincsearch
 set ignorecase
 
+" create undo points at puncuation when writing prose
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap : :<c-g>u
+inoremap ; ;<c-g>u
 
 " plugin configuration
 let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
@@ -71,5 +68,6 @@ autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=ma
 
 autocmd FileType javascript,css,perl nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,css,perl inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
+autocmd FileType markdown source ~/.vim/_includes/words.vim
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
