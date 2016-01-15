@@ -66,8 +66,8 @@ let g:vim_markdown_frontmatter      = 1
 let g:vim_markdown_folding_disabled = 1
 autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
 
-autocmd FileType javascript,css,perl nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript,css,perl inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
+nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 autocmd FileType markdown source ~/.vim/_includes/words.vim
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
