@@ -8,6 +8,7 @@ Plug 'porqz/KeyboardLayoutSwitcher'
 
 " Operation
 Plug 'lfilho/cosco.vim'
+Plug 'godlygeek/tabular'
 Plug 'Raimondi/delimitMate'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -66,6 +67,9 @@ let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
 
 let g:vim_markdown_frontmatter      = 1
 let g:vim_markdown_folding_disabled = 1
+
+let g:kls_mappings                  = 0 "disable switching layout, when pressing ':'
+
 autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
 
 nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
