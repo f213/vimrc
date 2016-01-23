@@ -11,12 +11,14 @@ Plug 'lfilho/cosco.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ervandew/supertab', { 'for': 'php' }
 
 " Modes
 Plug 'digitaltoad/vim-jade'
 Plug 'plasticboy/vim-markdown'
 Plug 'wavded/vim-stylus'
 Plug 'stephpy/vim-yaml' " Faster and more robust yaml highlighter
+Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 
 call plug#end()
 
