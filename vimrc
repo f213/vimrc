@@ -4,7 +4,7 @@ Plug 'altercation/vim-colors-solarized'
 
 " Stuff
 Plug 'editorconfig/editorconfig-vim'
-Plug 'porqz/KeyboardLayoutSwitcher'
+Plug 'f213/KeyboardLayoutSwitcher', { 'branch': 'upstream' }
 
 " Operation
 Plug 'lfilho/cosco.vim'
