@@ -16,7 +16,6 @@ Plug 'ervandew/supertab', { 'for': 'php' }
 
 " Modes
 Plug 'digitaltoad/vim-jade'
-Plug 'plasticboy/vim-markdown'
 Plug 'wavded/vim-stylus'
 Plug 'stephpy/vim-yaml' " Faster and more robust yaml highlighter
 Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
@@ -64,9 +63,6 @@ inoremap ; ;<c-g>u
 
 " plugin configuration
 let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
-
-let g:vim_markdown_frontmatter      = 1
-let g:vim_markdown_folding_disabled = 1
 
 let g:kls_mappings                  = 0 "disable switching layout, when pressing ':'
 
