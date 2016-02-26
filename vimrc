@@ -13,6 +13,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab', { 'for': 'php' }
+Plug 'scrooloose/nerdcommenter'
 
 " Modes
 Plug 'digitaltoad/vim-jade'
