@@ -1,3 +1,6 @@
+" disable ruler
+set noruler
+
 "make word movements always use big WORDS
 nnoremap w W
 nnoremap W w

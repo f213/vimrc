@@ -48,7 +48,6 @@ set smartindent
 set autoindent
 
 " ui options (i dont love distraction)
-set noruler
 set noshowmode
 
 " search options
@@ -71,7 +70,7 @@ autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=ma
 
 nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
-autocmd FileType markdown source ~/.vim/_includes/words.vim
+autocmd FileType markdown source ~/.vim/_includes/markdown.vim
 autocmd FileType perl source ~/.vim/_includes/perlbrew.vim
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
