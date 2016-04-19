@@ -19,7 +19,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'digitaltoad/vim-jade'
 Plug 'wavded/vim-stylus'
 Plug 'stephpy/vim-yaml' " Faster and more robust yaml highlighter
-Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
+"Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 
 call plug#end()
 
@@ -32,6 +32,7 @@ if has('gui_running')
 else
         set background=dark
 endif
+
 colorscheme solarized
 
 " russian hotkeys
