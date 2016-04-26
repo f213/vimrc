@@ -9,4 +9,4 @@ snippet confess
 snippet debug
 	use Data::Dumper::Simple;
 
-	$self->debug(${1});
+	$self->debug(Dumper(${1}));
