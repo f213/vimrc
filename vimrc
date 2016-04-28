@@ -18,7 +18,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab', { 'for': 'php' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'msanders/snipmate.vim'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 " Modes
 Plug 'digitaltoad/vim-jade'
