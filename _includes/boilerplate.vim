@@ -15,3 +15,5 @@ set binary
 " disable error bell
 set noerrorbells
 set visualbell t_vb=
+
+set ruler

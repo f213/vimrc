@@ -1,3 +1,7 @@
+for i in split(glob('~/.vim/_includes/*.vim'), '\n')
+    exe 'source' i
+endfor
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
@@ -21,21 +25,24 @@ Plug 'digitaltoad/vim-jade'
 Plug 'wavded/vim-stylus'
 Plug 'stephpy/vim-yaml' " Faster and more robust yaml highlighter
 "Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
+Plug 'ervandew/supertab'
+
+" Python
+Plug 'klen/python-mode', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 call plug#end()
 
-source ~/.vim/_includes/boilerplate.vim
 
 if has('gui_running')
         set background=light
         set gfn=Consolas:h16
-        source ~/.vim/_includes/wrapping.vim
+        "source ~/.vim/_includes/wrapping.vim
 else
         set background=dark
 endif
 
 colorscheme solarized
-
 " russian hotkeys
 set keymap      =russian-jcukenwin
 set iminsert    =0
@@ -51,6 +58,7 @@ set autoindent
 
 " ui options (i dont love distraction)
 set noshowmode
+setlocal nonumber
 
 " search options
 set noincsearch
@@ -72,7 +80,9 @@ autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=ma
 
 nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
-autocmd FileType markdown source ~/.vim/_includes/markdown.vim
-autocmd FileType perl source ~/.vim/_includes/perlbrew.vim
+"autocmd FileType markdown source ~/.vim/_includes/markdown.vim
+"autocmd FileType perl source ~/.vim/_includes/perlbrew.vim
+"autocmd FileType python source ~/.vim/_includes/python.vim
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
+
