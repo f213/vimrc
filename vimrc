@@ -16,7 +16,7 @@ Plug 'godlygeek/tabular'
 Plug 'Raimondi/delimitMate'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ervandew/supertab', { 'for': 'php' }
+Plug 'ervandew/supertab', { 'for': 'php,perl,python' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -27,8 +27,6 @@ Plug 'honza/vim-snippets'
 Plug 'digitaltoad/vim-jade'
 Plug 'wavded/vim-stylus'
 Plug 'stephpy/vim-yaml' " Faster and more robust yaml highlighter
-"Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
-Plug 'ervandew/supertab'
 
 " Python
 Plug 'klen/python-mode', { 'for': 'python' }
