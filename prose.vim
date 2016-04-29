@@ -1,5 +1,5 @@
 " disable ruler
-set noruler
+setlocal noruler
 
 "make word movements always use big WORDS
 nnoremap w W
@@ -26,3 +26,10 @@ onoremap e E
 onoremap E e
 onoremap ge gE
 onoremap gE ge
+
+" create undo points at puncuation when writing prose
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap : :<c-g>u
+inoremap ; ;<c-g>u

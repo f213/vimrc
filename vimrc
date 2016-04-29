@@ -67,13 +67,6 @@ setlocal nonumber
 set noincsearch
 set ignorecase
 
-" create undo points at puncuation when writing prose
-inoremap . .<c-g>u
-inoremap ! !<c-g>u
-inoremap ? ?<c-g>u
-inoremap : :<c-g>u
-inoremap ; ;<c-g>u
-
 " plugin configuration
 let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
 
@@ -83,9 +76,7 @@ autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=ma
 
 nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
-"autocmd FileType markdown source ~/.vim/_includes/markdown.vim
-"autocmd FileType perl source ~/.vim/_includes/perlbrew.vim
-"autocmd FileType python source ~/.vim/_includes/python.vim
+autocmd FileType markdown source ~/.vim/prose.vim
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
