@@ -12,6 +12,8 @@ Plug 'f213/KeyboardLayoutSwitcher'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'joshdick/onedark.vim'
+
 call plug#end()
 
 
@@ -53,6 +55,9 @@ let g:kls_mappings                  = 0 "disable switching layout, when pressing
 autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
 
 source ~/.vim/prose.vim
+
+syntax on
+colorscheme onedark
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
