@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 
 Plug 'editorconfig/editorconfig-vim'
-Plug 'f213/KeyboardLayoutSwitcher'
 
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -26,10 +25,6 @@ else
 endif
 
 colorscheme solarized
-" russian hotkeys
-set keymap      =russian-jcukenwin
-set iminsert    =0
-set imsearch    =0
 
 " spaces instead of tabs
 set expandtab
@@ -39,9 +34,10 @@ set shiftwidth  =4
 set smartindent
 set autoindent
 
-" ui options (i dont love distraction)
-set noshowmode
-setlocal nonumber
+" ui options
+set cursorline
+set ruler
+set number
 
 " search options
 set noincsearch
@@ -53,8 +49,6 @@ let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
 let g:kls_mappings                  = 0 "disable switching layout, when pressing ':'
 
 autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
-
-source ~/.vim/prose.vim
 
 syntax on
 colorscheme onedark
